@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,9 +19,6 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 
 }
 
@@ -56,23 +56,26 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: 711px 399px;
-  grid-template-rows: 540px;
+  width: 1140px;
+  height: 602px;
+  grid-template-areas: "result details";
   gap: 30px;
-  justify-content: center;
-  align-content: center;
+  align-content: end;
 }
 
 .result {
-  align-self: end;
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 711px;
+  grid-area: result;
 }
 
 .result__video-container {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .result__video {
@@ -86,10 +89,6 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: end;
-}
-
-.search-form__fieldset {
-  border: none;
 }
 
 .search-form__fieldset {
@@ -239,13 +238,14 @@ ol {
 }
 
 .title {
-  color: #FFF;
-  font-family: Oswald, Arial, sans-serif;
-  font-size: 75px;
-  font-style: normal;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  line-height: 0.94;
+  font-size: 75px;
+  line-height: 94%; 
   text-transform: uppercase;
+  width: 255px;
+  height: 172px;
+  margin-bottom: 26px;
 }
 
 .content__accent {
@@ -258,9 +258,8 @@ ol {
 }
 
 .content__list-container {
-  height: 400px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  height: 306px;
+  overflow: hidden auto;
   align-self: end;
   position: relative;
 }
@@ -271,19 +270,20 @@ ol {
   gap: 30px;
 }
 
-.content__list-item:active {
-  background-color: #545050;
-}
-
 .content__list-item:hover {
   text-decoration: underline;
 }
 
+.content__card-link:active {
+  background: #545050; 
+  text-decoration: none; 
+}
+
 .content__card-link {
-  display: block;
   text-decoration: none;
   color: #fff;
-  margin: 2px;
+  display: block; 
+  cursor: pointer; 
 }
 
 .content__card-link:focus {
@@ -301,7 +301,6 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
 }
 
 .content__video-card-description-container {
@@ -315,10 +314,10 @@ ol {
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
-  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; 
-  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 192px; 
 }
 
 .content__video-card-description {
@@ -328,6 +327,11 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 0.9;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
@@ -338,7 +342,6 @@ ol {
 }
 
 .more-button {
-  width: 395px;
+  width: 390px;
   margin: 2px;
 }
-
