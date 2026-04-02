@@ -19,7 +19,6 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-
 }
 
 h1,
@@ -57,7 +56,6 @@ ol {
 .content {
   display: grid;
   width: 1140px;
-  height: 602px;
   grid-template-areas: "result details";
   gap: 26px;
   align-content: end;
@@ -234,7 +232,6 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
 }
 
 .title {
@@ -244,8 +241,7 @@ ol {
   line-height: 94%; 
   text-transform: uppercase;
   width: 255px;
-  height: 172px;
-  margin-bottom: 26px;
+  margin-bottom: 14px;
 }
 
 .content__accent {
@@ -259,7 +255,7 @@ ol {
 
 .content__list-container {
   height: 306px;
-  overflow: hidden auto;
+  overflow: auto;
   align-self: end;
   position: relative;
 }
