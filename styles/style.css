@@ -100,7 +100,7 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .search-form__label {
@@ -241,7 +241,7 @@ ol {
   line-height: 94%; 
   text-transform: uppercase;
   width: 255px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .content__accent {
@@ -254,7 +254,8 @@ ol {
 }
 
 .content__list-container {
-  height: 306px;
+  height: 308px;
+  width: 396px;
   overflow: auto;
   align-self: end;
   position: relative;
